@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF - Encuentra la Ubicación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio</h1>
+        <p>Leotrikis45 está buscando la oración en lo alto del gran colosal. ¿Puedes ayudarlo, X favor?</p>
+        <p>Busca en lo más alto. 🏟️</p>
+        <p>Formato de la flag como en ATENEA: flag{cifradoEnMD5}</p>
+        <form id="flagForm">
+            <input type="text" id="flagInput" placeholder="Introduce la flag aquí" required>
+            <input type="submit" value="Verificar">
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('flagForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const flagInput = document.getElementById('flagInput').value;
+            const correctFlag = 'flag{f46bbfc8858ce96583ff9ee662af2ebd}';
+            const message = document.getElementById('message');
+
+            if (flagInput === correctFlag) {
+                message.textContent = '¡Correcto! Has encontrado la flag.';
+                message.style.color = 'green';
+            } else {
+                message.textContent = 'Incorrecto. Sigue buscando.';
+                message.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
