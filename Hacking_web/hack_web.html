@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción al CTF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        input {
+            padding: 10px;
+            margin-top: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+    <script>
+        function checkFlag() {
+            const inputFlag = document.getElementById("flag").value;
+            const correctHash = "7c24a8625a2f5d72f9b4cbf6638f4e03";
+            const messageElement = document.getElementById("message");
+            if (inputFlag === correctHash) {
+                messageElement.textContent = "¡Flag correcta! Bien hecho.";
+                messageElement.className = "success";
+            } else {
+                messageElement.textContent = "Flag incorrecta, intenta de nuevo.";
+                messageElement.className = "error";
+            }
+        }
+        function goToChallenge() {
+            window.location.href = "web.html";
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>El Misterio del Código Perdido - Ejercicio 1</h1>
+        <p>Hace mucho tiempo, un grupo de hackers dejó un mensaje oculto en esta web. Solo aquellos con la astucia suficiente podrán descifrarlo y acceder al siguiente nivel.</p>
+        <p>Encuentra la clave perdida e introdúcela en el campo de abajo para continuar con tu misión.</p>
+        <input type="text" id="flag" placeholder="Introduce la flag">
+        <button class="button" onclick="checkFlag()">Verificar Flag</button>
+        <button class="button" onclick="goToChallenge()">Ir a la Página de Reto</button>
+        <p id="message"></p>
+    </div>
+</body>
+</html>
