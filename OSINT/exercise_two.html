@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style_osint.css">
+    <script src="../scripts/script_osint.js" defer></script>
+    <title>OSINT - Reto</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>OSINT Challenge</h1>
+        <div class="challenge-container">
+            <div class="text-section">
+                <p>Una fotografía histórica muestra a dos líderes estrechando sus manos en lo que parece ser una reunión
+                    diplomática de gran relevancia. Sin embargo, hay algo oculto en esta imagen, un detalle que solo un
+                    verdadero
+                    analista OSINT podrá descubrir.</p>
+                <p>Tu misión es identificar el nombre original en su idioma local del lugar emblemático donde se tomó
+                    esta
+                    fotografía y combinarlo con un dato oculto: la fecha de modificación del archivo.</p>
+                <p>El flag debe componerse como este ejemplo: flag{statueofliberty20170426}, donde el nombre de la
+                    infraestructura estará en minúsculas y sin espacios. Así también, el formato de la fecha será
+                    yyyymmdd.</p>
+            </div>
+
+            <div class="image-section">
+                <img src="https://www.puntlandes.com/wp-content/uploads/2017/04/8-8.jpg" alt="Hint Image"
+                    class="hint-image">
+            </div>
+        </div>
+
+        <div class="answer-section">
+            <input type="text" id="answer" placeholder="flag{md5}">
+            <button onclick="checkAnswer()">Comprobar</button>
+            <p id="feedback" class="feedback"></p>
+        </div>
+    </div>
+</body>
+
+</html>
