@@ -1,0 +1,115 @@
+/* Estilos básicos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la sección principal (container) */
+.container {
+    margin: 100px auto;
+    padding: 20px;
+    width: 300px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+img{
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Estilos para los campos de entrada y botones */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Clase oculta para mostrar texto de error */
+.hidden {
+    display: none;
+    color: red;
+}
+
+/* Estilos para el texto oculto en el modo claro */
+.hidden-text {
+    visibility: hidden; /* Hace que no sea visible en modo claro */
+    color: transparent; /* Hace que el texto sea transparente en modo claro */
+}
+
+/* Modo oscuro activado manualmente */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Hacemos que el texto oculto sea visible solo en modo oscuro */
+body.dark-mode .hidden-text {
+    visibility: visible; /* El texto se vuelve visible en modo oscuro */
+    color: black; /* El texto se hace negro en modo oscuro */
+}
+
+/* Estilos para el modo oscuro en sistemas que lo prefieren */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: white;
+    }
+
+    .container {
+        background-color: #2c2c2c;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    button {
+        background-color: #333;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+
+    /* Hacemos que el texto oculto sea visible solo en modo oscuro */
+    .hidden-text {
+        visibility: visible;
+        color: black;
+    }
+}
+
+/* Estilos del botón para activar el modo oscuro */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del botón en modo oscuro */
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+}
+
+/* Deshabilitar la visibilidad del texto seleccionado en cualquier modo */
+::selection {
+    background-color: transparent;
+    color: transparent;
+}
