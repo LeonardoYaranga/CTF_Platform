@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style_osint.css">
+    <script src="../scripts/script_osint_three.js" defer></script>
+    <title>OSINT - Reto</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>Encontrar al dueño de la foto</h1>
+        <div class="challenge-container">
+            <div class="text-section">
+                <p>Necesitamos saber el nombre de la persona que tomó esta fotografía, para ello necesitamos conocer el
+                    nombre de la infraestructura en donde fue tomada la fotografia y conocer el nombre del objetivo de
+                    este reto.
+                </p>
+                <p>
+                    Para superar este reto debes poner el nombre de la infraestructura en minusculas, sin espacio y sin
+                    tildes, encriptado con md5.
+                </p>
+            </div>
+
+            <div class="image-section1">
+                <img src="../img/original.jpg" alt="Hint Image" class="hint-image">
+            </div>
+        </div>
+
+        <div class="answer-section">
+            <input type="text" id="answer" placeholder="flag{md5}">
+            <button onclick="checkAnswer()">Comprobar</button>
+            <p id="feedback" class="feedback"></p>
+        </div>
+    </div>
+</body>
+
+</html>

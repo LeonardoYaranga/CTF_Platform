@@ -37,6 +37,10 @@ body {
     max-width: 40%;
 }
 
+.image-section1{
+    max-width: 20%;
+}
+
 .hint-image {
     width: 100%;
     border-radius: 8px;
